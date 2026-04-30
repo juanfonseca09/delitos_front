@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Predicción de Delitos en Uruguay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto busca predecir la cantidad de delitos mensuales en Uruguay usando machine learning.
 
-## Available Scripts
+## Idea
 
-In the project directory, you can run:
+La idea fue bastante simple, ver si a partir de lo que pasó en meses anteriores se puede estimar lo que va a pasar el mes siguiente.
 
-### `npm start`
+## Datos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se usaron datos reales de delitos en Uruguay, que se agruparon por mes para construir una serie temporal.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Qué hice
 
-### `npm test`
+- Limpieza de datos
+- Agrupación por año y mes
+- Creación de variables de rezago 
+- Entrenamiento de un modelo de regresión lineal
+- Evaluación con MAE y R²
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Modelo
 
-### `npm run build`
+Se usó regresión lineal porque:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Es simple
+- Es fácil de interpretar
+- Para este problema alcanza
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Resultados
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- MAE: 654
+- R²: 0.27
 
-### `npm run eject`
+No es un modelo perfecto, pero tiene sentido porque los datos tienen bastante variabilidad.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Predicción
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+La predicción para el próximo mes es de aproximadamente:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**13.943 delitos**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Pruebas extra
 
-## Learn More
+Se probó agregar homicidios como variable adicional para ver si mejoraba el modelo, pero no hubo cambios en los resultados, por lo que se descartó.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Python (pandas, sklearn)
+- Jupyter Notebook
+- React + Bootstrap (para visualización)
 
-### Code Splitting
+## Conclusión
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+El modelo logra capturar parte del comportamiento temporal, pero muestra las limitaciones típicas de este tipo de problemas, mucha variabilidad y dificultad para predecir cambios bruscos.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aún así, sirve como una buena aproximación y como ejercicio práctico de machine learning aplicado a datos reales.
