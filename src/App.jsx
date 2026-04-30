@@ -39,7 +39,7 @@ export default function App() {
                   Use una regresión lineal porque era suficiente para este problema y además me permitía entender bien cómo estaba tomando decisiones el modelo ya que no era la idea hacer algo súper complejo sino algo que tenga sentido.
                 </p>
                 <p className="text-muted">
-                  El modelo termina con un error promedio de 654 y un R² de 0.27 que no es espectacular, pero es bastante razonable considerando que los datos tienen bastante ruido y cambios como los de la pandemia que no son fáciles de anticipar.
+                  El modelo termina con un error promedio de 654 y un R² de 0.27 que no es espectacular, pero es bastante razonable considerando que los datos tienen bastante ruido y cambios que no son fáciles de anticipar.
                 </p>
                 <p className="text-muted">
                   Con ese modelo, la predicción para el próximo mes queda en aproximadamente 13.943 delitos, que obviamente no es algo exacto, pero sirve como una aproximación basada en el comportamiento reciente.
