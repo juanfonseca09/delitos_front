@@ -107,7 +107,7 @@ pred = int(model.predict(nuevo)[0])
           <Col>
             <Card className="shadow-sm border-0">
               <Card.Body>
-                <h4 className="mb-3">Código del modelo (Python)</h4>
+                <h4 className="mb-3">Codigo del modelo:</h4>
                 <SyntaxHighlighter language="python" style={oneDark}>
                   {codigo}
                 </SyntaxHighlighter>
