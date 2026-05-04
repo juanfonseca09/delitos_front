@@ -58,7 +58,7 @@ pred = int(model.predict(nuevo)[0])
 `;
 
   return (
-    <div style={{ background: "#3783cf60", minHeight: "100vh" }}>
+    <div>
       <Container className="py-5">
         <Row className="mb-5">
           <Col>
