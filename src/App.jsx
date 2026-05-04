@@ -1,32 +1,22 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { FaGithub } from "react-icons/fa";
+import "./App.css";
 
 export default function App() {
-
   return (
-    <div>
+    <div className="app-bg">
       <Container className="py-5">
-        <Row className="mb-5">
+        <Row className="mb-5 text-center text-white">
           <Col>
-            <h1>Predicción de Delitos en Uruguay</h1>
+            <h1 className="fw-bold text-uppercase">
+              Predicción de Delitos en Uruguay
+            </h1>
           </Col>
         </Row>
-        <Row className="mb-5 justify-content-center">
-          <Col md={8} lg={7}>
-            <Card className="shadow-sm border-0">
-              <Card.Body className="text-center">
-                <img
-                  src="/delitos.png"
-                  alt="Gráfico delitos"
-                  className="img-fluid rounded"
-                  style={{ maxHeight: "400px", objectFit: "contain" }}
-                />
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col md={9} lg={8}>
-            <Card className="shadow-sm border-0">
+        <Row className="mb-4 justify-content-center">
+          <Col md={10}>
+            <Card className="project-card shadow-sm border-0">
               <Card.Body>
                 <p className="text-muted">
                   Este proyecto lo hice con la idea de ver si podía predecir la cantidad de delitos por mes en Uruguay usando machine learning, pero tratando de mantenerlo lo más simple posible.
@@ -43,9 +33,31 @@ export default function App() {
                 <p className="text-muted">
                   Con ese modelo, la predicción para el próximo mes queda en aproximadamente 13.943 delitos, que obviamente no es algo exacto, pero sirve como una aproximación basada en el comportamiento reciente.
                 </p>
-                <p className="text-muted mb-0">
+                <p className="text-muted mb-3">
                   También probé agregar homicidios como variable extra para ver si aportaba algo más de información, pero no cambió prácticamente nada en los resultados, así que decidí no incluirlo en la versión final.
                 </p>
+                <a
+                  href="https://github.com/juanfonseca09/delitos/blob/main/delitos.ipynb"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="github-btn"
+                >
+                  <FaGithub style={{ marginRight: "6px" }} />
+                  Ver código
+                </a>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+        <Row className="mb-5 justify-content-center">
+          <Col md={10}>
+            <Card className="project-card shadow-sm border-0">
+              <Card.Body className="text-center">
+                <img
+                  src="/delitos.png"
+                  alt="grafico"
+                  className="img-fluid rounded"
+                />
               </Card.Body>
             </Card>
           </Col>
