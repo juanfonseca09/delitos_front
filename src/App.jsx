@@ -33,9 +33,6 @@ export default function App() {
                 <p className="text-muted">
                   El modelo termina con un error promedio de 654 y explica un 27% la variabilidad de los datos, que no es espectacular, pero es bastante razonable considerando que los datos tienen bastante ruido y cambios que no son fáciles de anticipar.
                 </p>
-                <p className="text-muted">
-                  Con ese modelo, la predicción para el próximo mes queda en aproximadamente 13.943 delitos, que obviamente no es algo exacto, pero sirve como una aproximación basada en el comportamiento reciente.
-                </p>
                 <p className="text-muted mb-3">
                   También probé agregar homicidios como variable extra para ver si aportaba algo más de información, pero no cambió prácticamente nada en los resultados, así que decidí no incluirlo en la versión final.
                 </p>
