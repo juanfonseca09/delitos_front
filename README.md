@@ -17,6 +17,7 @@ Se usaron datos reales de delitos en Uruguay, que se agruparon por mes para cons
 - Creación de variables de rezago 
 - Entrenamiento de un modelo de regresión lineal
 - Evaluación con MAE y R²
+- Exportación de resultados para visualización en Power BI
 
 ## Modelo
 
@@ -39,15 +40,20 @@ La predicción para el próximo mes es de aproximadamente:
 
 **13.943 delitos**
 
+## Dashboard
+
+Además del análisis en Python, se construyó un dashboard interactivo en Power BI para comparar valores reales y predicciones del modelo a lo largo del tiempo.
+
 ## Pruebas extra
 
 Se probó agregar homicidios como variable adicional para ver si mejoraba el modelo, pero no hubo cambios en los resultados, por lo que se descartó.
 
 ## Tech stack
 
-- Python (pandas, sklearn)
+- Python 
 - Jupyter Notebook
-- React + Bootstrap (para visualización)
+- Power BI
+- React + Bootstrap
 
 ## Conclusión
 

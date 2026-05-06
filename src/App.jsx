@@ -25,6 +25,9 @@ export default function App() {
                   Partí de datos reales, los limpié un poco y los agrupé por mes para tener una serie temporal y a partir de eso armé variables usando lo que había pasado en los meses anteriores, básicamente para que el modelo tenga algo de contexto y no esté mirando solo el presente.
                 </p>
                 <p className="text-muted">
+                  Además, exporté los resultados para construir visualizaciones y dashboards interactivos en Power BI, comparando valores reales y predicciones del modelo a lo largo del tiempo.
+                </p>
+                <p className="text-muted">
                   Use una regresión lineal porque era suficiente para este problema y además me permitía entender bien cómo estaba tomando decisiones el modelo ya que no era la idea hacer algo súper complejo sino algo que tenga sentido.
                 </p>
                 <p className="text-muted">
